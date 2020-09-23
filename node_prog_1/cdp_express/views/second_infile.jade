@@ -1,0 +1,13 @@
+extends layout
+
+block second_infile					
+	h4 Second input for transformation				
+	ul					
+		for item in second_infile								
+			div(class="container" style="width: 400px; height:40px; margin-top: 20px;")							
+				li(style="list-style:none;")
+					audio(preload="none", autobuffer, controls style="width: 100%; height 70% z-index:1;")
+						source(src="#{item}", type="audio/wav")		
+				p= item
+			div(class="container" style="width: 400px; height:40px; margin-top: 20px;")
+				a(href='/second_infile/#{item}/delete') Remove

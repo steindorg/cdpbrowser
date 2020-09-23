@@ -1,0 +1,13 @@
+extends layout
+
+block process_form
+	h3= name
+	p= process.info[0] 
+	div(style='margin-top: 20px')
+		form#processform(name="parameter",method="post",action="/transform/#{process.type}/#{process.name}/execute_script")
+			each item, i in process.info
+				if i > 0
+					input#process.name(class="col-md-5", type="text", autocomplete="off", placeholder="parameter#{i}", name="parameter#{i}")
+					p(class="col-md-4")= process.info[i]
+			div(style="display: block;")
+				button#btnSubmit(type="submit") Execute process

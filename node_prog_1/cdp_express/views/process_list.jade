@@ -1,0 +1,309 @@
+extends layout
+
+block process_list
+	div(class='container' style='width: 8200px;')
+		div(class='container' style='width: 220px; float:left; height:40px;')
+			h3 Time
+			ul(class='input-group-sm')
+				li(style='list-style: none;')
+					a(href='/transform/stretch/time') Stretch/compress Time
+				li(style='list-style: none;')
+					a(href='/transform/stretch/spectrum_m1') Str/Com above freq
+				li(style='list-style: none;')
+					a(href='/transform/stretch/spectrum_m2') Str/Com bellow freq
+		div(class='container' style='width: 220px; float:left; height:40px;')
+			h3 Distort
+			ul(class='input-group-sm')			
+				li(style='list-style: none;')
+					a(href='/transform/distort/average') Average
+				li(style="list-style: none;")
+					a(href='/transform/distort/IMPOSE_ENV_m1') IMPOSE_ENVELOPE_rising
+				li(style="list-style: none;")
+					a(href='/transform/distort/IMPOSE_ENV_m2') IMPOSE_ENVELOPE_falling
+				li(style="list-style: none;")
+					a(href='/transform/distort/fractal') Fractal
+				li(style="list-style: none;")
+					a(href='/transform/distort/multiply') Multiply
+				li(style="list-style: none;")
+					a(href='/transform/distort/filter_m1') Filter below freq
+				li(style="list-style: none;")
+					a(href='/transform/distort/filter_m2') Filter above freq
+				li(style="list-style: none;")
+					a(href='/transform/distort/filter_m3') Filter above/bellow freq
+				li(style="list-style: none;")
+					a(href='/transform/distort/interact_m1') Interact interleave
+				li(style="list-style: none;")
+					a(href='/transform/distort/interact_m2') Impose wavecycle 1->2 
+				li(style="list-style: none;")
+					a(href='/transform/distort/pulsed_m1') Pulsed_m1
+				li(style="list-style: none;")
+					a(href='/transform/distort/interpolate') Interpolate
+				li(style="list-style: none;")
+					a(href='/transform/distort/omit') Omit
+		div(class='container' style='width: 220px; float:left; height:40px;')
+			h3 Distort		
+			ul(class='input-group-sm')
+				li(style="list-style: none;")
+					a(href='/transform/distort/pitch') Pitch
+				li(style="list-style: none;")
+					a(href='/transform/distort/reform_square_fix') Reform_square_fix
+				li(style="list-style: none;")
+					a(href='/transform/distort/reform_square') Reform_square
+				li(style="list-style: none;")
+					a(href='/transform/distort/reform_tri') Reform_tri
+				li(style="list-style: none;")
+					a(href='/transform/distort/reform_inve_cycl') Reform_inve_cycl
+				li(style="list-style: none;")
+					a(href='/transform/distort/reform_click') Reform_click
+				li(style="list-style: none;")
+					a(href='/transform/distort/reform_sin') Reform_sin
+				li(style="list-style: none;")
+					a(href='/transform/distort/reform_exag') Reform_exag
+				li(style="list-style: none;")
+					a(href='/transform/distort/replace') Replace
+				li(style="list-style: none;")
+					a(href='/transform/distort/reverse') Reverse
+				li(style="list-style: none;")
+					a(href='/transform/distort/shuffle') Shuffle
+				li(style="list-style: none;")
+					a(href='/transform/distort/repeat') Repeat
+				li(style="list-style: none;")
+					a(href='/transform/distort/repeat2') Repeat2
+
+		div(class='container' style="width: 220px; float:left; height:40px;")
+			h3 Modify
+			ul(class='input-group-sm')			
+				li(style="list-style: none;")
+					a(href='/transform/modify/speed') Speed
+				li(style="list-style: none;")
+					a(href='/transform/modify/revecho_m1') Revecho standart
+				li(style="list-style: none;")
+					a(href='/transform/modify/revecho_m2') Revecho varying delay
+				li(style="list-style: none;")
+					a(href='/transform/modify/reverse') Reverse
+				li(style="list-style: none;")
+					a(href='/transform/modify/shredd') Shredd
+				li(style="list-style: none;")
+					a(href='/transform/modify/Scrub') Scrub
+				li(style="list-style: none;")
+					a(href='/transform/modify/downgrade') Downgrade
+				li(style="list-style: none;")
+					a(href='/transform/modify/ring_modulation') Ring Modulate
+				li(style="list-style: none;")
+					a(href='/transform/modify/cross_modulation') Cross Modulate
+				li(style="list-style: none;")
+					a(href='/transform/modify/convolve') Convolve
+				li(style="list-style: none;")
+					a(href='/transform/modify/shudder') Shudder
+				li(style="list-style: none;")
+					a(href='/transform/modify/stack') Stack
+				li(style="list-style: none;")
+					a(href='/transform/modify/brassage_m6') Granular reconstruction
+		div(class='container' style="width: 220px; float:left; height:40px;")
+			h3 Reverb/Delay
+			ul(class='input-group-sm')			
+				li(style="list-style: none;")
+					a(href='/transform/reverb/reverb') Reverb
+		div(class='container' style="width: 220px; float:left; height:40px;")
+			h3 Grain
+			ul(class='input-group-sm')
+				li(style="list-style: none;")
+					a(href='/transform/grain/reorder') Reorder
+		div(class='container' style="width: 220px; float:left; height:40px;")
+			h3 Arpeggiate 
+			ul(class='input-group-sm')
+				li(style="list-style: none;")
+					a(href='/transform/hilite/arpeg_m1') Inside band ONLY
+				li(style="list-style: none;")
+					a(href='/transform/hilite/arpeg_m2') Boost
+				li(style="list-style: none;")
+					a(href='/transform/hilite/arpeg_m3') Below Boost
+				li(style="list-style: none;")
+					a(href='/transform/hilite/arpeg_m4') Above Boost
+				li(style="list-style: none;")
+					a(href='/transform/hilite/arpeg_m5') Below
+				li(style="list-style: none;")
+					a(href='/transform/hilite/arpeg_m6') Above
+				li(style="list-style: none;")
+					a(href='/transform/hilite/arpeg_m7') Once below
+				li(style="list-style: none;")
+					a(href='/transform/hilite/arpeg_m8') Once above 
+		div(class='container' style="width: 220px; float:left; height:40px;")
+			h3 Hilite 
+			ul(class='input-group-sm')
+				li(style="list-style: none;")
+					a(href='/transform/hilite/bltr') Time-average spectra
+				li(style="list-style: none;")
+					a(href='/transform/hilite/filter_hp') High Pass filter
+				li(style="list-style: none;")
+					a(href='/transform/hilite/filter_lp') Low Pass filter
+				li(style="list-style: none;")
+					a(href='/transform/hilite/filter_bp') Band Pass filter
+				li(style="list-style: none;")
+					a(href='/transform/hilite/filter_notch') Notch
+				li(style="list-style: none;")
+					a(href='/transform/hilite/pluck') Pluck
+				li(style="list-style: none;")
+					a(href='/transform/hilite/trace_loud') Trace Loudest
+				li(style="list-style: none;")
+					a(href='/transform/hilite/trace_low') Trace Low
+				li(style="list-style: none;")
+					a(href='/transform/hilite/trace_high') Trace High
+				li(style="list-style: none;")
+					a(href='/transform/hilite/trace_between') Trace between
+
+					
+		div(class='container' style="width: 220px; float:left; height:40px;")
+			h3 Blur
+			ul(class='input-group-sm')			
+				li(style="list-style: none;")
+					a(href='/transform/blur/blur') Blur
+				li(style="list-style: none;")
+					a(href='/transform/blur/avrg') Average spectrum
+				li(style="list-style: none;")
+					a(href='/transform/blur/chorus_m1') Chorus amps
+				li(style="list-style: none;")
+					a(href='/transform/blur/chorus_m2') Chorus freqs
+				li(style="list-style: none;")
+					a(href='/transform/blur/chorus_m5') Chorus Amps/freqs
+				li(style="list-style: none;")
+					a(href='/transform/blur/drunk') Drunk
+				li(style="list-style: none;")
+					a(href='/transform/blur/noise') Noise
+				li(style="list-style: none;")
+					a(href='/transform/blur/scatter') Scatter
+				li(style="list-style: none;")
+					a(href='/transform/blur/shuffle') Shuffle
+				li(style="list-style: none;")
+					a(href='/transform/blur/suppress') Suppress
+		div(class='container' style="width: 220px; float:left; height:40px;")
+			h3 Formants
+			ul(class='input-group-sm')
+				li(style="list-style: none;")
+					a(href='/transform/formants/put_m1') Replace formants
+				li(style="list-style: none;")
+					a(href='/transform/formants/put_m2') Impose formants
+				li(style="list-style: none;")
+					a(href='/transform/formants/vocode_m1') Vocode L-F-W
+				li(style="list-style: none;")
+					a(href='/transform/formants/vocode_m2') Vocode L-P-W
+		div(class='container' style="width: 220px; float:left; height:40px;")
+			h3 Combine
+			ul(class='input-group-sm')			
+				li(style="list-style: none;")
+					a(href='/transform/combine/cross') Cross
+				li(style="list-style: none;")
+					a(href='/transform/combine/diff') Diff
+				li(style="list-style: none;")
+					a(href='/transform/combine/sum') Sum
+				li(style="list-style: none;")
+					a(href='/transform/combine/max') Max
+				li(style="list-style: none;")
+					a(href='/transform/combine/interleave') Interleave
+				li(style="list-style: none;")
+					a(href='/transform/combine/mean_m1') Mean mode 1
+				li(style="list-style: none;")
+					a(href='/transform/combine/mean_m2') Mean mode 2
+				li(style="list-style: none;")
+					a(href='/transform/combine/mean_m3') Mean mode 3 
+				li(style="list-style: none;")
+					a(href='/transform/combine/mean_m4') Mean mode 4
+				li(style="list-style: none;")
+					a(href='/transform/combine/mean_m5') Mean mode 5
+				li(style="list-style: none;")
+					a(href='/transform/combine/mean_m6') Mean mode 6
+				li(style="list-style: none;")
+					a(href='/transform/combine/mean_m7') Mean mode 7
+				li(style="list-style: none;")
+					a(href='/transform/combine/mean_m8') Mean mode 8
+		
+
+		div(class='container' style="width: 220px; float:left; height:40px;")
+			h3 Morph
+			ul(class='input-group-sm')			
+				li(style="list-style: none;")
+					a(href='/transform/morph/bridge_m1') Bridge_interpolation_based
+				li(style="list-style: none;")
+					a(href='/transform/morph/bridge_m2') Bridge min(Infile2)
+				li(style="list-style: none;")
+					a(href='/transform/morph/bridge_m3') Bridge Infile1 to Infile2
+				li(style="list-style: none;")
+					a(href='/transform/morph/glide') Glide
+				li(style="list-style: none;")
+					a(href='/transform/morph/morph_m1') Morph Linearly
+				li(style="list-style: none;")
+					a(href='/transform/morph/morph_m2') Morph Cosinusoidal
+		
+
+		div(class='container' style="width: 220px; float:left; height:40px;")
+			h3 Focus
+			ul(class='input-group-sm')			
+				li(style="list-style: none;")
+					a(href='/transform/focus/accu') Sustain (accumulate)
+				li(style="list-style: none;")
+					a(href='/transform/focus/exag') Exaggerate spec_cnt
+				li(style="list-style: none;")
+					a(href='/transform/focus/focus') Focus
+				li(style="list-style: none;")
+					a(href='/transform/focus/fold') Fold
+				li(style="list-style: none;")
+					a(href='/transform/focus/step') Step freeze
+
+		div(class='container' style="width: 220px; float:left; height:40px;")
+			h3 Filter
+			ul(class='input-group-sm')			
+				li(style="list-style: none;")
+					a(href='/transform/filter/bank_m1') Bank Harmonic series
+				li(style="list-style: none;")
+					a(href='/transform/filter/bank_m2') bank Alter Harmonics
+				li(style="list-style: none;")
+					a(href='/transform/filter/bank_m3') bank_Subharmonic_Series
+				li(style="list-style: none;")
+					a(href='/transform/filter/bank_m4') bank Harmonic offset
+				li(style="list-style: none;")
+					a(href='/transform/filter/bank_m5') bank div freqs
+				li(style="list-style: none;")
+					a(href='/transform/filter/bank_m6') bank div semitones
+				li(style="list-style: none;")
+					a(href='/transform/filter/lohi') Cutt Off Lo-Hi-Band
+				li(style="list-style: none;")
+					a(href='/transform/filter/phasing') Phasing
+				li(style="list-style: none;")
+					a(href='/transform/filter/sweeping_Band') Sweeping BandPass
+				li(style="list-style: none;")
+					a(href='/transform/filter/sweeping_Lo') Sweeping LoPass
+
+
+		div(class='container' style="width: 220px; float:left; height:40px;")
+			h3 Generate
+			ul(class='input-group-sm')			
+				li(style="list-style: none;")
+					a(href='/transform/synth/wave') wave
+		div(class='container' style="width: 220px; float:left; height:40px;")
+			h3 Extend
+			ul(class='input-group-sm')			
+				li(style="list-style: none;")
+					a(href='/transform/extend/freeze_m1') Freeze
+				li(style="list-style: none;")
+					a(href='/transform/extend/drunk_m1') Drunk
+				li(style="list-style: none;")
+					a(href='/transform/extend/drunk_m2') Drunk_holds
+				li(style="list-style: none;")
+					a(href='/transform/extend/iterate_m1') Iterate_specify_dur
+				li(style="list-style: none;")
+					a(href='/transform/extend/baktobak') Bak to Bak
+				li(style="list-style: none;")
+					a(href='/transform/extend/loop_m1') Loop Mode 1
+				li(style="list-style: none;")
+					a(href='/transform/extend/loop_m2') Loop Mode 2
+				li(style="list-style: none;")
+					a(href='/transform/extend/loop_m3') Loop Mode 3
+				li(style="list-style: none;")
+					a(href='/transform/extend/scramble_m1') Scramble Mode 1
+				li(style="list-style: none;")
+					a(href='/transform/extend/scramble_m2') Scramble Mode 2
+				li(style="list-style: none;")
+					a(href='/transform/extend/doublets') Doublets
+				li(style="list-style: none;")
+					a(href='/transform/extend/zigzag') ZigZag
+

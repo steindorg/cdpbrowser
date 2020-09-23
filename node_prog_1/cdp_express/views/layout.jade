@@ -1,0 +1,67 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
+		script(type="text/javascript", href="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js")
+		script(type="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
+	body
+		script(type="text/javascript", href="/javascripts/view_process.js")
+		div(class="container")			
+			div(class="navbar navbar-inverse navbar-fixed-top" id="navabar" style="background-color:#E2E1E1;")			
+				
+				div(class='container')
+					
+					div(class="navbar-header")
+						h1 CDP Client				
+				
+				div(class='col-md-5')
+					
+					ul(class="nav navbar-nav" id="nav_ul" style="float: left;")
+						
+						li(id="nav_li" role="presentation")
+							a(href='/transform') Transform sounds
+						li(id="nav_li" role="presentation")
+							a(href='/sel-sounds') Soundfiles 
+						li(id="nav_li" role="presentation")
+							a(href='/second_infile') Second inputs 
+						li(id="nav_li" role="presentation")
+							a(href='/results') Latest Results
+
+
+				
+				div(class='col-md-4' style='margin-top: 5px; float:right; border: 1px;')
+					
+					form#soundfileform(class="navbar-form navbar-left", method="post", action="/sel-sounds")
+					
+						div(class='form-group')
+					
+							input#infile(style='font-size:10px;' type="file", placeholder="Soundfile", name="infile" multiple)
+					
+						button#btnSubmit(style='font-size:8px;' type="submit") SELECT
+
+				div(class='col-md-4' style='margin-top: 5px; float:right; border: 1px;')
+					
+					form#second_infileform(class="navbar-form navbar-left", method="post", action="/second_infile")
+					
+						div(class='form-group')
+							
+							input#second_infile(style='font-size:10px;' type="file", placeholder="second_infile", name="second_infile" multiple)
+				
+						button#btnSubmit(style='font-size:8px;' type="submit") SELECT SECOND INFILE
+		
+		div(class='container', id="sel-sounds" style='margin-top: 50px; margin-left:-40px')
+			
+		Div(class="container" id="secondfile" style='margin-left:-40px')			
+			
+		
+		
+		Div(class="container" id="cdp_process_list_container" style='margin-top: 50px; margin-left:-40px')
+			block process_list
+		Div(class="container" id="process_form" style='margin-top: 10px; margin-left:-40px')
+			block process_form
+		Div(class="container" id="results" style='margin-left:-40px')
+			block results
+			block sel-sounds
+			block second_infile
